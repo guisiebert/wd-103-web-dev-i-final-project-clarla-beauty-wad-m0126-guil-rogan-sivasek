@@ -3,36 +3,520 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clarla Beauty — Home</title>
+    <title>Carla Beauty — Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/pages/home.css" />
   </head>
   <body class="page-home">
-    <header class="site-header">
-      <div class="site-header__inner">
-        <a class="site-logo" href="index.html">Clarla Beauty</a>
-        <nav class="site-nav" aria-label="Main">
+    <!-- HEADER / NAV BAR -->
+    <header class="site-header site-header--split">
+      <div class="site-header__inner site-header__inner--split">
+        <button type="button" class="site-header__burger" id="menu-open">
+          <img
+            class="site-header__burger-icon"
+            src="assets/images/icon-burger.png"
+            width="22"
+            height="16"
+            alt=""
+          />
+        </button>
+
+        <nav class="site-nav site-nav--left site-nav--desktop">
           <ul>
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="academy.html">Academy</a></li>
-            <li><a href="beauty-tips.html">Beauty Tips</a></li>
-            <li><a href="about.html">About</a></li>
+            <li>
+              <a href="index.html" class="is-current">Home</a>
+            </li>
+            <li><a href="portfolio.html">My Work</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="academy.html">Classes</a></li>
           </ul>
         </nav>
+
+        <a class="site-logo site-logo--mark" href="index.html">
+          <img
+            src="assets/images/squared-logo.png"
+            width="120"
+            height="120"
+            alt="Carla Beauty — Home"
+          />
+        </a>
+
+        <nav class="site-nav site-nav--right site-nav--desktop">
+          <ul>
+            <li><a href="beauty-tips.html">Beauty Tips</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a
+                class="site-nav__social"
+                href="https://www.instagram.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  class="site-nav__ig"
+                  src="assets/images/icon-instagram.png"
+                  width="20"
+                  height="20"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <a
+          class="site-header__ig-mobile"
+          href="https://www.instagram.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            class="site-header__ig-mobile-icon"
+            src="assets/images/icon-instagram.png"
+            width="22"
+            height="22"
+            alt=""
+          />
+        </a>
       </div>
     </header>
 
-    <main class="site-main" id="main">
-      <h1 class="page-title">Home</h1>
-      <p>Placeholder content. Replace with Figma layout.</p>
+    <!-- Full-screen mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <div class="mobile-menu__panel">
+        <button type="button" class="mobile-menu__close" id="menu-close">
+          <img
+            class="mobile-menu__close-icon"
+            src="assets/images/icon-x.png"
+            width="22"
+            height="22"
+            alt=""
+          />
+        </button>
 
-      <button class="button" id="test-js">Test JS</button>
+        <a class="mobile-menu__logo" href="index.html">
+          <img
+            src="assets/images/squared-logo.png"
+            width="120"
+            height="120"
+            alt="Carla Beauty — Home"
+          />
+        </a>
+
+        <nav class="mobile-menu__nav">
+          <ul>
+            <li>
+              <a href="index.html" data-menu-link class="is-current">Home</a>
+            </li>
+            <li><a href="portfolio.html" data-menu-link>My Work</a></li>
+            <li><a href="services.html" data-menu-link>Services</a></li>
+            <li><a href="academy.html" data-menu-link>Classes</a></li>
+            <li><a href="beauty-tips.html" data-menu-link>Beauty Tips</a></li>
+            <li><a href="about.html" data-menu-link>About</a></li>
+            <li><a href="contact.html" data-menu-link>Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="mobile-menu__footer">
+          <div class="mobile-menu__social">
+            <a class="mobile-menu__social-link" href="tel:+16045550100">
+              <img
+                class="mobile-menu__social-img"
+                src="assets/images/icon-phone.png"
+                width="24"
+                height="24"
+                alt=""
+              />
+            </a>
+            <a
+              class="mobile-menu__social-link"
+              href="https://wa.me/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                class="mobile-menu__social-img"
+                src="assets/images/icon-whatsapp.png"
+                width="24"
+                height="24"
+                alt=""
+              />
+            </a>
+            <a
+              class="mobile-menu__social-link"
+              href="https://www.instagram.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                class="mobile-menu__social-img"
+                src="assets/images/icon-instagram.png"
+                width="24"
+                height="24"
+                alt=""
+              />
+            </a>
+          </div>
+          <p class="mobile-menu__tagline">Expert Makeup and Hairstyle Studio</p>
+        </div>
+      </div>
+    </div>
+
+    <main id="main" class="site-main site-main--home">
+      <!-- HERO SECTION -->
+      <section class="home-hero">
+        <div class="home-hero__bg"></div>
+        <div class="home-hero__content">
+          <h1 id="home-hero-heading" class="visually-hidden">Carla Beauty</h1>
+          <img
+            class="home-hero__script"
+            src="assets/images/home/Scripted%20Text%20-%20Carla%20Beauty.png"
+            width="610"
+            height="190"
+            alt="Carla Beauty"
+          />
+          <p class="home-hero__tagline">
+            Vancouver's go-to makeup and hairstyle, with a Brazilian twist
+          </p>
+          <a class="home-hero__cta" href="contact.html">Free Consultation</a>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section class="home-about">
+        <div class="home-about__inner">
+          <div class="home-about__media">
+            <div class="home-about__frame">
+              <img
+                class="home-about__photo"
+                src="assets/images/home/Profile%20Picture.jpg"
+                width="480"
+                height="600"
+                alt="Portrait of the makeup artist"
+                loading="lazy"
+              />
+            </div>
+            <div class="home-about__badge">
+              <span class="home-about__badge-brand">L'Oréal Professionnel Paris</span>
+              <span class="home-about__badge-text">Official Certified Professional</span>
+            </div>
+          </div>
+
+          <div class="home-about__copy">
+            <p class="home-about__monogram">
+              <img
+                src="assets/images/squared-logo.png"
+                width="56"
+                height="56"
+                alt=""
+              />
+            </p>
+            <h2 id="home-about-heading" class="home-about__title">
+              Professional Makeup &amp; Hairstyle Artist
+            </h2>
+            <p class="home-about__body">
+              10+ years creating stunning looks for weddings and special occasions.
+            </p>
+            <div class="home-about__actions">
+              <a class="home-about__btn" href="about.html">About Me</a>
+              <img
+                class="home-about__signature"
+                src="assets/images/home/CarlaBeatriz%20Signature.png"
+                width="200"
+                height="48"
+                alt="Carla Beatriz"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRANDS SECTION -->
+      <section class="home-brands">
+        <div class="home-brands__inner">
+          <h2 id="home-brands-heading" class="home-brands__title">
+            <span class="home-brands__line"></span>
+            <span class="home-brands__label">Our Brands</span>
+            <span class="home-brands__line"></span>
+          </h2>
+          <div class="home-brands__grid">
+            <img
+              src="assets/images/home/our-brands.png"
+              width="1100"
+              height="360"
+              alt="Brand partners: MAC, Lancôme, Inglot, Laura Mercier, Charlotte Tilbury, Tarte, Anastasia Beverly Hills, Kryolan"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- MY WORK / YOU ARE A STAR SECTION -->
+      <section class="home-star">
+        <div class="home-star__inner">
+          <h2 id="home-star-heading" class="home-star__title">You are a star</h2>
+          <p class="home-star__lede">
+            Shine effortlessly, embrace your unique features with absolute confidence.
+          </p>
+          <a class="home-star__btn" href="portfolio.html">My Work</a>
+
+          <div class="home-star__gallery">
+            <img
+              src="assets/images/home/gallery-1.jpg"
+              width="400"
+              height="300"
+              alt="Makeup look gallery image 1"
+              loading="lazy"
+            />
+            <img
+              src="assets/images/home/gallery-2.jpg"
+              width="400"
+              height="300"
+              alt="Makeup look gallery image 2"
+              loading="lazy"
+            />
+            <img
+              src="assets/images/home/gallery-3.jpg"
+              width="400"
+              height="300"
+              alt="Makeup look gallery image 3"
+              loading="lazy"
+            />
+            <img
+              src="assets/images/home/gallery-4.jpg"
+              width="400"
+              height="300"
+              alt="Makeup look gallery image 4"
+              loading="lazy"
+            />
+          </div>
+
+          <figure class="home-star__testimonial">
+            <blockquote class="home-star__quote">
+              <span class="home-star__quote-mark">“</span>
+              Carla is the best! She made me the nights brightest star! She stayed with me
+              the whole wedding ensuring I always looked and felt wonderful!!
+            </blockquote>
+            <figcaption class="home-star__quote-name">Jenny</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- SERVICES SECTION -->
+      <section class="home-services">
+        <div class="home-services__inner">
+          <h2 id="home-services-heading" class="home-services__title">
+            <span class="home-services__title-line">Makeup &amp;</span>
+            <span class="home-services__title-line">Hairstyle</span>
+          </h2>
+          <p class="home-services__lede">
+            We offer fully customizable plan to meet your unique requirements.
+          </p>
+          <a class="home-services__btn" href="services.html">Get a Quote</a>
+
+          <div class="home-services__grid">
+            <img
+              class="home-services__cat home-services__cat--party"
+              src="assets/images/home/category-1-party.png"
+              width="400"
+              height="560"
+              alt="Party makeup and hairstyle"
+              loading="lazy"
+            />
+            <img
+              class="home-services__cat home-services__cat--wedding"
+              src="assets/images/home/category-2-wedding.png"
+              width="400"
+              height="640"
+              alt="Wedding makeup and hairstyle"
+              loading="lazy"
+            />
+            <img
+              class="home-services__cat home-services__cat--shoot"
+              src="assets/images/home/category-3-photoshoot.png"
+              width="400"
+              height="560"
+              alt="Photoshoot makeup and hairstyle"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ACADEMY SECTION -->
+      <section class="home-academy">
+        <div class="home-academy__inner">
+          <div class="home-academy__content">
+            <h2 id="home-academy-heading" class="home-academy__title">Make Up 101</h2>
+            <ul class="home-academy__list">
+              <li class="home-academy__item">
+                <span class="home-academy__item-icon">
+                  <img
+                    src="assets/images/icon-ribbon.png"
+                    width="28"
+                    height="28"
+                    alt=""
+                  />
+                </span>
+                <div class="home-academy__item-body">
+                  <h3 class="home-academy__item-title">1-on-1 Master Class</h3>
+                  <p class="home-academy__item-text">
+                    Customize your learning experience to excel in your chosen areas, all at your own pace.
+                  </p>
+                  <a class="home-academy__item-link" href="academy.html">View Class &gt;</a>
+                </div>
+              </li>
+              <li class="home-academy__item">
+                <span class="home-academy__item-icon">
+                  <img
+                    src="assets/images/icon-ribbon.png"
+                    width="28"
+                    height="28"
+                    alt=""
+                  />
+                </span>
+                <div class="home-academy__item-body">
+                  <h3 class="home-academy__item-title">Professional 1-day Workshop</h3>
+                  <p class="home-academy__item-text">
+                    Discover popular and practical techniques to apply right away!
+                  </p>
+                  <a class="home-academy__item-link" href="academy.html">View Class &gt;</a>
+                </div>
+              </li>
+              <li class="home-academy__item">
+                <span class="home-academy__item-icon">
+                  <img
+                    src="assets/images/icon-ribbon.png"
+                    width="28"
+                    height="28"
+                    alt=""
+                  />
+                </span>
+                <div class="home-academy__item-body">
+                  <h3 class="home-academy__item-title">Self-Makeup Beginner Class</h3>
+                  <p class="home-academy__item-text">
+                    Learn the basics, practice doing your own makeup and make new friends in the process!
+                  </p>
+                  <a class="home-academy__item-link" href="academy.html">View Class &gt;</a>
+                </div>
+              </li>
+            </ul>
+            <a class="home-academy__btn-all" href="academy.html">All Classes</a>
+          </div>
+          <div class="home-academy__media">
+            <div class="home-academy__frame">
+              <img
+                class="home-academy__portrait"
+                src="assets/images/home/portrait.jpg"
+                width="520"
+                height="700"
+                alt="Portrait of Carla at a makeup session"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DIY BEAUTY TIPS SECTION -->
+      <section class="home-diy">
+        <div class="home-diy__inner">
+          <h2 id="home-diy-heading" class="home-diy__title">DIY Beauty Corner</h2>
+          <p class="home-diy__subtitle">Quick tips and tricks for your daily routine.</p>
+          <div class="home-diy__grid">
+            <a class="home-diy__card" href="beauty-tips.html">
+              <img
+                src="assets/images/home/video-1.png"
+                width="400"
+                height="300"
+                alt="Beauty tip video: makeup tutorial preview"
+                loading="lazy"
+              />
+            </a>
+            <a class="home-diy__card" href="beauty-tips.html">
+              <img
+                src="assets/images/home/video-2.png"
+                width="400"
+                height="300"
+                alt="Beauty tip video: bridal look preview"
+                loading="lazy"
+              />
+            </a>
+            <a class="home-diy__card" href="beauty-tips.html">
+              <img
+                src="assets/images/home/video-3.png"
+                width="400"
+                height="300"
+                alt="Beauty tip video: hair styling preview"
+                loading="lazy"
+              />
+            </a>
+          </div>
+          <a class="home-diy__btn" href="beauty-tips.html">More Beauty Tips</a>
+        </div>
+      </section>
     </main>
 
-    <footer class="site-footer">
-      <p>&copy; Clarla Beauty. School project.</p>
+    <!-- FOOTER SECTION -->
+    <footer class="site-footer site-footer--home">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="site-footer__logo-link" href="index.html">
+            <img
+              class="site-footer__logo-img"
+              src="assets/images/squared-logo.png"
+              width="72"
+              height="72"
+              alt=""
+            />
+            <span class="site-footer__wordmark">Carla Beauty</span>
+          </a>
+          <p class="site-footer__tagline">Expert Makeup and Hairstyle Studio</p>
+          <div class="site-footer__socials">
+            <a class="site-footer__social" href="tel:+16045550100">
+              <img src="assets/images/icon-phone.png" width="22" height="22" alt="" />
+            </a>
+            <a
+              class="site-footer__social"
+              href="https://wa.me/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src="assets/images/icon-whatsapp.png" width="22" height="22" alt="" />
+            </a>
+            <a
+              class="site-footer__social"
+              href="https://www.instagram.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src="assets/images/icon-instagram.png" width="22" height="22" alt="" />
+            </a>
+          </div>
+        </div>
+
+        <hr class="site-footer__rule" />
+
+        <nav class="site-footer__nav">
+          <ul class="site-footer__nav-list">
+            <li><a href="index.html" class="is-current">Home</a></li>
+            <li><a href="portfolio.html">My Work</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="academy.html">Classes</a></li>
+            <li><a href="beauty-tips.html">Beauty Tips</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <hr class="site-footer__rule" />
+
+        <p class="site-footer__copy">Copyright 2024, Carla Beauty</p>
+      </div>
     </footer>
 
     <script src="js/main.js"></script>
