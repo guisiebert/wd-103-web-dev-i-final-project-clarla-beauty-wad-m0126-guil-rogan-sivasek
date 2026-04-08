@@ -1,0 +1,151 @@
+/* --------------------------------------------------------------------------
+   Global: variables, reset, shared layout (nav, footer)
+   Breakpoint: 1280px — below = mobile, 1280px+ = desktop
+   -------------------------------------------------------------------------- */
+
+:root {
+  --bp-desktop: 1280px;
+
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-muted: #5c5c5c;
+  --color-accent: #c9a962;
+
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+
+  --header-height: 3.5rem;
+  --content-max-width: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Mobile-first: default styles apply below 1280px */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  min-height: var(--header-height);
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--color-bg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.site-header__inner {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.site-logo {
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-decoration: none;
+}
+
+.site-logo:hover {
+  color: var(--color-text);
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-md);
+}
+
+.site-nav a {
+  text-decoration: none;
+  font-size: 0.9375rem;
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.site-main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}
+
+.site-footer {
+  margin-top: auto;
+  padding: var(--space-md);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.page-title {
+  margin: 0 0 var(--space-md);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (min-width: 1280px) {
+  .site-header {
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .site-main {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .page-title {
+    font-size: 2.25rem;
+  }
+}
