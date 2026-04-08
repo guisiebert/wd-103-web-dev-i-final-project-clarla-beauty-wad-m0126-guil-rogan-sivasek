@@ -3,16 +3,33 @@
    Breakpoint: 1280px — below = mobile, 1280px+ = desktop
    -------------------------------------------------------------------------- */
 
+/* Baskervville & Montserrat fonts */
+/* Using Montserrat instead of Avenir (not in Google Fonts) */
+@import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+
 :root {
   --bp-desktop: 1280px;
 
-  --color-bg: #ffffff;
-  --color-text: #1a1a1a;
-  --color-text-muted: #5c5c5c;
-  --color-accent: #c9a962;
+  /* BC Beauty palette (style guide) */
+  --color-brand-black: #191919;
+  --color-bold-main: #725a58;
+  --color-accent-pink: #e3b6b1;
+  --color-light-pink: #fae9e7;
+  --color-pale-white: #f8f6f4;
+  --color-paper-white: #fbfafa;
+  --color-mid-grey: #a3a3a3;
+  --color-dark-grey: #535353;
+  --color-dark-pink: #b99692;
+  --color-brown: #a06d67;
 
-  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
-    sans-serif;
+  --color-bg: var(--color-pale-white);
+  --color-text: var(--color-brand-black);
+  --color-text-muted: var(--color-dark-grey);
+  --color-accent: var(--color-bold-main);
+
+  --font-sans: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  --font-serif: "Baskervville", Georgia, "Times New Roman", serif;
 
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -59,7 +76,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-accent);
+  color: var(--color-bold-main);
 }
 
 /* Mobile-first: default styles apply below 1280px */
@@ -69,8 +86,8 @@ a:hover {
   z-index: 100;
   min-height: var(--header-height);
   padding: var(--space-sm) var(--space-md);
-  background-color: var(--color-bg);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: var(--color-pale-white);
+  border-bottom: 1px solid rgba(25, 25, 25, 0.08);
 }
 
 .site-header__inner {
