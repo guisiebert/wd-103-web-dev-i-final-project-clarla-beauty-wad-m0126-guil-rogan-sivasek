@@ -48,4 +48,49 @@ document.addEventListener("DOMContentLoaded", () => {
   } else if (typeof mqDesktop.addListener === "function") {
     mqDesktop.addListener(onViewportChange);
   }
+
 });
+
+// ================================
+// BOOKING FORM (CONTACT PAGE)
+// ================================
+
+// SELECT BUTTON TOGGLE
+document.querySelectorAll(".select-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("active");
+  });
+});
+
+// COUNTER (+ / -)
+document.querySelectorAll(".person").forEach(person => {
+  const countEl = person.querySelector(".count");
+  const plus = person.querySelector(".plus");
+  const minus = person.querySelector(".minus");
+
+  if (!countEl || !plus || !minus) return;
+
+  plus.addEventListener("click", () => {
+    countEl.textContent = parseInt(countEl.textContent) + 1;
+  });
+
+  minus.addEventListener("click", () => {
+    let current = parseInt(countEl.textContent);
+    if (current > 0) {
+      countEl.textContent = current - 1;
+    }
+  });
+});
+
+// FORM SUBMIT → SHOW RESULT
+const bookingForm = document.getElementById("bookingForm");
+const result = document.getElementById("result");
+
+if (bookingForm && result) {
+  bookingForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    bookingForm.classList.add("hidden");
+    result.classList.remove("hidden");
+  });
+}

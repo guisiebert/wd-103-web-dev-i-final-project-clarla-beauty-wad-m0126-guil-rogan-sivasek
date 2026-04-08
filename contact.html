@@ -165,11 +165,74 @@
       </div>
     </div>
 
-    <main class="site-main" id="main">
-      <h1 class="page-title">Contact</h1>
-      <p>Placeholder: Service tab, Classes tab, forms, feedback.</p>
-    </main>
+  <main class="site-main booking" id="main">
 
+    <!-- TAB -->
+    <div class="booking__tabs">
+      <span class="active">Services</span>
+      <span>Classes</span>
+    </div>
+
+    <form id="bookingForm">
+
+      <!-- SERVICE -->
+      <h2>Service</h2>
+      <div class="booking__row">
+        <button type="button" class="select-btn active">Makeup</button>
+        <button type="button" class="select-btn active">Hairstyle</button>
+      </div>
+
+      <!-- LOCATION -->
+      <h2>Event Location</h2>
+      <input type="text" placeholder="Search address">
+      <label><input type="checkbox"> Not decided</label>
+
+      <!-- PREMIUM -->
+      <h2>Premium service</h2>
+      <div class="booking__grid">
+        <label><input type="checkbox"> Deep skin cleansing</label>
+        <label><input type="checkbox"> Hydromassage</label>
+        <label><input type="checkbox"> Waxing</label>
+        <label><input type="checkbox"> Relaxing massage</label>
+      </div>
+
+      <!-- PEOPLE -->
+      <h2>Anyone else need service?</h2>
+
+      <div class="person">
+        <span>Woman</span>
+        <div class="counter">
+          <button type="button" class="minus">-</button>
+          <span class="count">0</span>
+          <button type="button" class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="person">
+        <span>Man</span>
+        <div class="counter">
+          <button type="button" class="minus">-</button>
+          <span class="count">0</span>
+          <button type="button" class="plus">+</button>
+        </div>
+      </div>
+
+      <!-- MESSAGE -->
+      <h2>Anything you want us to know?</h2>
+      <textarea placeholder="Your message"></textarea>
+
+      <button type="submit" class="submit-btn">Submit</button>
+
+    </form>
+
+    <!-- RESULT (HIDDEN) -->
+    <section id="result" class="result hidden">
+      <h2>Thanks! We will contact you soon!</h2>
+      <p>Your estimated price: <strong>CAD 1000 - 1200</strong></p>
+    </section>
+
+  </main>
+  
     <!-- FOOTER SECTION -->
     <footer class="site-footer site-footer--home">
       <div class="site-footer__inner">

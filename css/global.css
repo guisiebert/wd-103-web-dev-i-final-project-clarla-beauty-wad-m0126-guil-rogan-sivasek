@@ -741,5 +741,210 @@ body.menu-open {
       font-size: 2.5rem;
     }
   }
+
+    /* ================================
+    ABOUT PAGE 
+    ================================ */
+
+  /* HERO */
+  .about__hero {
+    text-align: center;
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .about__label {
+    font-family: var(--font-serif);
+    letter-spacing: 2px;
+    color: var(--color-accent-pink);
+    margin-bottom: 10px;
+  }
+
+  .about__title {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+  }
+
+  /* INTRO */
+  .about__intro {
+    background: var(--color-light-pink);
+    padding: var(--space-xl) var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    align-items: center;
+  }
+
+  /* IMAGE */
+  .about__image img {
+    width: 280px;
+    border: 2px solid rgba(0,0,0,0.1);
+  }
+
+  /* CONTENT */
+  .about__content {
+    max-width: 500px;
+  }
+
+  .about__content h2 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .about__content p {
+    font-size: 0.9rem;
+    color: var(--color-dark-grey);
+    margin-bottom: var(--space-md);
+  }
+
+  /* BUTTON */
+  .about__btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid var(--color-dark-grey);
+    text-decoration: none;
+    font-family: var(--font-serif);
+  }
+
+  .about__btn:hover {
+    background: var(--color-pale-white);
+  }
+
+  /* BRANDS */
+  .about__brands {
+    text-align: center;
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .about__brands h2 {
+    font-family: var(--font-serif);
+    margin-bottom: var(--space-lg);
+  }
+
+  .brands__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    align-items: center;
+  }
+
+  .brands__grid img {
+    max-width: 120px;
+    margin: auto;
+    opacity: 0.8;
+  }
+
+  /* DESKTOP */
+  @media (min-width: 1280px) {
+
+    .about__title {
+      font-size: 3.5rem;
+    }
+
+    .about__intro {
+      flex-direction: row;
+      justify-content: center;
+      gap: 60px;
+    }
+
+    .about__image img {
+      width: 350px;
+    }
+
+    .about__content h2 {
+      font-size: 2rem;
+    }
+
+    .brands__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
     
+    /* ================================
+   CONTACT PAGE 
+    ================================ */
+  .booking {
+    background: var(--color-light-pink);
+    padding: 40px;
+  }
+
+  /* TABS */
+  .booking__tabs {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    font-family: var(--font-serif);
+  }
+
+  .booking__tabs span {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+
+  .booking__tabs .active {
+    opacity: 1;
+    border-bottom: 2px solid black;
+  }
+
+  /* BUTTON SELECT */
+  .select-btn {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+  }
+
+  .select-btn.active {
+    background: var(--color-accent-pink);
+  }
+
+  /* GRID */
+  .booking__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  /* COUNTER */
+  .person {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+
+  .counter {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .counter button {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* TEXTAREA */
+  textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+  }
+
+  /* SUBMIT */
+  .submit-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+  }
+
+  /* RESULT */
+  .result {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .hidden {
+    display: none;
+  }
 }
