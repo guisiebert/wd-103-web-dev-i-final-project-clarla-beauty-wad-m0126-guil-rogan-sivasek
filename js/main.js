@@ -17,14 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function openMenu() {
     menu.hidden = false;
-    openBtn.setAttribute("aria-expanded", "true");
     document.body.classList.add("menu-open");
     closeBtn.focus();
   }
 
   function closeMenu() {
     menu.hidden = true;
-    openBtn.setAttribute("aria-expanded", "false");
     document.body.classList.remove("menu-open");
     openBtn.focus();
   }

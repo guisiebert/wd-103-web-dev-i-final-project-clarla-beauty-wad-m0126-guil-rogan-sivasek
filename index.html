@@ -10,17 +10,10 @@
     <link rel="stylesheet" href="css/pages/home.css" />
   </head>
   <body class="page-home">
-    <!-- NAV BAR -->
+    <!-- HEADER / NAV BAR -->
     <header class="site-header site-header--split">
       <div class="site-header__inner site-header__inner--split">
-        <button
-          type="button"
-          class="site-header__burger"
-          id="menu-open"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-          aria-label="Open menu"
-        >
+        <button type="button" class="site-header__burger" id="menu-open">
           <img
             class="site-header__burger-icon"
             src="assets/images/icon-burger.png"
@@ -30,13 +23,13 @@
           />
         </button>
 
-        <nav class="site-nav site-nav--left site-nav--desktop" aria-label="Primary">
+        <nav class="site-nav site-nav--left site-nav--desktop">
           <ul>
             <li>
-              <a href="index.html" aria-current="page">Home</a>
+              <a href="index.html" class="is-current">Home</a>
             </li>
             <li><a href="portfolio.html">My Work</a></li>
-            <li><a href="contact.html">Services</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="academy.html">Classes</a></li>
           </ul>
         </nav>
@@ -50,7 +43,7 @@
           />
         </a>
 
-        <nav class="site-nav site-nav--right site-nav--desktop" aria-label="Secondary">
+        <nav class="site-nav site-nav--right site-nav--desktop">
           <ul>
             <li><a href="beauty-tips.html">Beauty Tips</a></li>
             <li><a href="about.html">About</a></li>
@@ -61,7 +54,6 @@
                 href="https://www.instagram.com/"
                 rel="noopener noreferrer"
                 target="_blank"
-                aria-label="Instagram"
               >
                 <img
                   class="site-nav__ig"
@@ -80,7 +72,6 @@
           href="https://www.instagram.com/"
           rel="noopener noreferrer"
           target="_blank"
-          aria-label="Instagram"
         >
           <img
             class="site-header__ig-mobile-icon"
@@ -94,21 +85,9 @@
     </header>
 
     <!-- Full-screen mobile menu -->
-    <div
-      class="mobile-menu"
-      id="mobile-menu"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="mobile-menu-title"
-      hidden
-    >
+    <div class="mobile-menu" id="mobile-menu" hidden>
       <div class="mobile-menu__panel">
-        <button
-          type="button"
-          class="mobile-menu__close"
-          id="menu-close"
-          aria-label="Close menu"
-        >
+        <button type="button" class="mobile-menu__close" id="menu-close">
           <img
             class="mobile-menu__close-icon"
             src="assets/images/icon-x.png"
@@ -117,8 +96,6 @@
             alt=""
           />
         </button>
-
-        <h2 id="mobile-menu-title" class="visually-hidden">Main navigation</h2>
 
         <a class="mobile-menu__logo" href="index.html">
           <img
@@ -129,13 +106,13 @@
           />
         </a>
 
-        <nav class="mobile-menu__nav" aria-label="Mobile">
+        <nav class="mobile-menu__nav">
           <ul>
             <li>
-              <a href="index.html" data-menu-link aria-current="page">Home</a>
+              <a href="index.html" data-menu-link class="is-current">Home</a>
             </li>
             <li><a href="portfolio.html" data-menu-link>My Work</a></li>
-            <li><a href="contact.html" data-menu-link>Services</a></li>
+            <li><a href="services.html" data-menu-link>Services</a></li>
             <li><a href="academy.html" data-menu-link>Classes</a></li>
             <li><a href="beauty-tips.html" data-menu-link>Beauty Tips</a></li>
             <li><a href="about.html" data-menu-link>About</a></li>
@@ -145,11 +122,7 @@
 
         <div class="mobile-menu__footer">
           <div class="mobile-menu__social">
-            <a
-              class="mobile-menu__social-link"
-              href="tel:+16045550100"
-              aria-label="Phone"
-            >
+            <a class="mobile-menu__social-link" href="tel:+16045550100">
               <img
                 class="mobile-menu__social-img"
                 src="assets/images/icon-phone.png"
@@ -163,7 +136,6 @@
               href="https://wa.me/"
               rel="noopener noreferrer"
               target="_blank"
-              aria-label="WhatsApp"
             >
               <img
                 class="mobile-menu__social-img"
@@ -178,7 +150,6 @@
               href="https://www.instagram.com/"
               rel="noopener noreferrer"
               target="_blank"
-              aria-label="Instagram"
             >
               <img
                 class="mobile-menu__social-img"
@@ -196,8 +167,8 @@
 
     <main id="main" class="site-main site-main--home">
       <!-- HERO SECTION -->
-      <section class="home-hero" aria-labelledby="home-hero-heading">
-        <div class="home-hero__bg" aria-hidden="true"></div>
+      <section class="home-hero">
+        <div class="home-hero__bg"></div>
         <div class="home-hero__content">
           <h1 id="home-hero-heading" class="visually-hidden">Carla Beauty</h1>
           <img
@@ -215,7 +186,7 @@
       </section>
 
       <!-- ABOUT SECTION -->
-      <section class="home-about" aria-labelledby="home-about-heading">
+      <section class="home-about">
         <div class="home-about__inner">
           <div class="home-about__media">
             <div class="home-about__frame">
@@ -228,14 +199,14 @@
                 loading="lazy"
               />
             </div>
-            <div class="home-about__badge" role="group" aria-label="Certification">
+            <div class="home-about__badge">
               <span class="home-about__badge-brand">L'Oréal Professionnel Paris</span>
               <span class="home-about__badge-text">Official Certified Professional</span>
             </div>
           </div>
 
           <div class="home-about__copy">
-            <p class="home-about__monogram" aria-hidden="true">
+            <p class="home-about__monogram">
               <img
                 src="assets/images/squared-logo.png"
                 width="56"
@@ -264,12 +235,13 @@
         </div>
       </section>
 
-      <section class="home-brands" aria-labelledby="home-brands-heading">
+      <!-- BRANDS SECTION -->
+      <section class="home-brands">
         <div class="home-brands__inner">
           <h2 id="home-brands-heading" class="home-brands__title">
-            <span class="home-brands__line" aria-hidden="true"></span>
+            <span class="home-brands__line"></span>
             <span class="home-brands__label">Our Brands</span>
-            <span class="home-brands__line" aria-hidden="true"></span>
+            <span class="home-brands__line"></span>
           </h2>
           <div class="home-brands__grid">
             <img
@@ -283,7 +255,8 @@
         </div>
       </section>
 
-      <section class="home-star" aria-labelledby="home-star-heading">
+      <!-- MY WORK / YOU ARE A STAR SECTION -->
+      <section class="home-star">
         <div class="home-star__inner">
           <h2 id="home-star-heading" class="home-star__title">You are a star</h2>
           <p class="home-star__lede">
@@ -324,8 +297,8 @@
 
           <figure class="home-star__testimonial">
             <blockquote class="home-star__quote">
-              <span class="home-star__quote-mark" aria-hidden="true">“</span>
-              Carla is the best! She made me the night’s brightest star! She stayed with me
+              <span class="home-star__quote-mark">“</span>
+              Carla is the best! She made me the nights brightest star! She stayed with me
               the whole wedding ensuring I always looked and felt wonderful!!
             </blockquote>
             <figcaption class="home-star__quote-name">Jenny</figcaption>
@@ -333,7 +306,8 @@
         </div>
       </section>
 
-      <section class="home-services" aria-labelledby="home-services-heading">
+      <!-- SERVICES SECTION -->
+      <section class="home-services">
         <div class="home-services__inner">
           <h2 id="home-services-heading" class="home-services__title">
             <span class="home-services__title-line">Makeup &amp;</span>
@@ -342,7 +316,7 @@
           <p class="home-services__lede">
             We offer fully customizable plan to meet your unique requirements.
           </p>
-          <a class="home-services__btn" href="contact.html">Get a Quote</a>
+          <a class="home-services__btn" href="services.html">Get a Quote</a>
 
           <div class="home-services__grid">
             <img
@@ -373,13 +347,14 @@
         </div>
       </section>
 
-      <section class="home-academy" aria-labelledby="home-academy-heading">
+      <!-- ACADEMY SECTION -->
+      <section class="home-academy">
         <div class="home-academy__inner">
           <div class="home-academy__content">
             <h2 id="home-academy-heading" class="home-academy__title">Make Up 101</h2>
             <ul class="home-academy__list">
               <li class="home-academy__item">
-                <span class="home-academy__item-icon" aria-hidden="true">
+                <span class="home-academy__item-icon">
                   <img
                     src="assets/images/icon-ribbon.png"
                     width="28"
@@ -396,7 +371,7 @@
                 </div>
               </li>
               <li class="home-academy__item">
-                <span class="home-academy__item-icon" aria-hidden="true">
+                <span class="home-academy__item-icon">
                   <img
                     src="assets/images/icon-ribbon.png"
                     width="28"
@@ -413,7 +388,7 @@
                 </div>
               </li>
               <li class="home-academy__item">
-                <span class="home-academy__item-icon" aria-hidden="true">
+                <span class="home-academy__item-icon">
                   <img
                     src="assets/images/icon-ribbon.png"
                     width="28"
@@ -447,7 +422,8 @@
         </div>
       </section>
 
-      <section class="home-diy" aria-labelledby="home-diy-heading">
+      <!-- DIY BEAUTY TIPS SECTION -->
+      <section class="home-diy">
         <div class="home-diy__inner">
           <h2 id="home-diy-heading" class="home-diy__title">DIY Beauty Corner</h2>
           <p class="home-diy__subtitle">Quick tips and tricks for your daily routine.</p>
@@ -485,6 +461,7 @@
       </section>
     </main>
 
+    <!-- FOOTER SECTION -->
     <footer class="site-footer site-footer--home">
       <div class="site-footer__inner">
         <div class="site-footer__brand">
@@ -500,7 +477,7 @@
           </a>
           <p class="site-footer__tagline">Expert Makeup and Hairstyle Studio</p>
           <div class="site-footer__socials">
-            <a class="site-footer__social" href="tel:+16045550100" aria-label="Phone">
+            <a class="site-footer__social" href="tel:+16045550100">
               <img src="assets/images/icon-phone.png" width="22" height="22" alt="" />
             </a>
             <a
@@ -508,7 +485,6 @@
               href="https://wa.me/"
               rel="noopener noreferrer"
               target="_blank"
-              aria-label="WhatsApp"
             >
               <img src="assets/images/icon-whatsapp.png" width="22" height="22" alt="" />
             </a>
@@ -517,7 +493,6 @@
               href="https://www.instagram.com/"
               rel="noopener noreferrer"
               target="_blank"
-              aria-label="Instagram"
             >
               <img src="assets/images/icon-instagram.png" width="22" height="22" alt="" />
             </a>
@@ -526,11 +501,11 @@
 
         <hr class="site-footer__rule" />
 
-        <nav class="site-footer__nav" aria-label="Footer">
+        <nav class="site-footer__nav">
           <ul class="site-footer__nav-list">
-            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="index.html" class="is-current">Home</a></li>
             <li><a href="portfolio.html">My Work</a></li>
-            <li><a href="contact.html">Services</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="academy.html">Classes</a></li>
             <li><a href="beauty-tips.html">Beauty Tips</a></li>
             <li><a href="about.html">About</a></li>
