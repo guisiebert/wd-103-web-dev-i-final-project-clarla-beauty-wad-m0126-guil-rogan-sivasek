@@ -585,277 +585,113 @@ body.menu-open {
   line-height: 1.2;
 }
 
+
+.site-header {
+  padding: var(--space-md) var(--space-lg);
+}
+
+.site-header__inner--split {
+  padding: 1rem var(--space-lg);
+}
+
+.site-main {
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.page-title {
+  font-size: 2.25rem;
+}
+
+.site-footer__inner {
+  padding: 5rem var(--space-lg) var(--space-xl);
+}
+
+.site-footer__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  max-width: none;
+  grid-template-columns: unset;
+  grid-template-rows: unset;
+  grid-auto-flow: unset;
+  justify-items: unset;
+}
+
+/* ================================
+  BRANDS SECTION
+================================ */
+
+
+/* —— Brands —— */
+.brands {
+  background: var(--color-paper-white);
+  padding: var(--space-xl) var(--space-md) calc(var(--space-xl) * 1.25);
+}
+
+.brands__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.brands__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin: 0 0 var(--space-lg);
+}
+
+.brands__line {
+  flex: 1;
+  height: 1px;
+  background: rgba(25, 25, 25, 0.2);
+  max-width: 160px;
+}
+
+.brands__label {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-brand-black);
+  white-space: nowrap;
+}
+
+
+/* ================================
+  DESKTOP OVERRIDES (1280px+)
+================================ */
+
 @media (min-width: 1280px) {
-  .site-header {
-    padding: var(--space-md) var(--space-lg);
-  }
-
-  .site-header__inner--split {
-    padding: 1rem var(--space-lg);
-  }
-
-  .site-main {
-    padding: var(--space-xl) var(--space-lg);
-  }
-
-  .page-title {
-    font-size: 2.25rem;
-  }
-
-  .site-footer__inner {
-    padding: 5rem var(--space-lg) var(--space-xl);
-  }
-
-  .site-footer__nav-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem 1.5rem;
-    max-width: none;
-    grid-template-columns: unset;
-    grid-template-rows: unset;
-    grid-auto-flow: unset;
-    justify-items: unset;
-  }
-
-  /* ================================
-    BEAUTY TIPS PAGE
-  ================================ */
-
-  /* HERO */
-  .beauty-tips__hero {
-    text-align: center;
-    padding: 40px 20px 20px;
-  }
-
-  .beauty-tips__title {
-    font-family: var(--font-serif);
-    font-size: 2rem;
-    margin-bottom: 5px;
-    letter-spacing: 2px;
-  }
-
-  .beauty-tips__title::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 2px;
-    background: var(--color-accent-pink);
-    margin: 10px auto 0;
-  }
-
-  .beauty-tips__subtitle {
-    color: var(--color-text-muted);
-    font-size: 0.9rem;
-    max-width: 280px;
-    margin: 10px auto 20px;
-  }
-
-  /* FILTER */
-  .beauty-tips__filters {
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    padding: 10px 15px;
-    margin-bottom: 20px;
-    scrollbar-width: none; /* Firefox */
-  }
-
-  .beauty-tips__filters::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
-  }
-
-  .filter {
-    border: none;
-    background: none;
-    font-family: var(--font-serif);
-    color: var(--color-mid-grey);
-    cursor: pointer;
-    white-space: nowrap;
-    font-size: 14px;
-  }
-
-  .filter.active {
-    color: var(--color-brand-black);
-    font-weight: 600;
-    border-bottom: 1px solid var(--color-brand-black);
-  }
-
-  /* GRID */
   .beauty-tips__grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column for mobile */
-    gap: 20px;
-    padding: 0 15px;
-  }
-
-  @media (min-width: 480px) {
-    .beauty-tips__grid {
-      grid-template-columns: 1fr 1fr; /* Two columns for small tablets */
-    }
-  }
-
-  /* CARD */
-  .tip-card {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #eee;
-  }
-
-  .tip-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-
-  .tip-card__overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 15px 12px;
-    color: white;
-    font-size: 0.9rem;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-  }
-
-  /* ================================
-    ABOUT PAGE 
-  ================================ */
-
-  .about__hero {
-    text-align: center;
-    padding: var(--space-xl) var(--space-md);
-  }
-
-  .about__title {
-    font-family: var(--font-serif);
-    font-size: 2.25rem;
-    letter-spacing: 2px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
   }
 
   .about__intro {
-    background: var(--color-light-pink);
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    gap: 80px;
+    padding: 80px;
   }
 
-  .about__image img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border: 1px solid rgba(0,0,0,0.1);
+  .about__title {
+    font-size: 3.5rem;
   }
 
-  .about__content h2 {
-    font-family: var(--font-serif);
-    font-size: 1.5rem;
-    line-height: 1.3;
+  .brands {
+    padding: 5rem var(--space-lg) 6rem;
   }
 
-  .about__btn {
-    display: inline-block;
-    padding: 12px 30px;
-    border: 1px solid var(--color-dark-grey);
-    text-decoration: none;
-    font-family: var(--font-serif);
-    margin-top: 10px;
-  }
-
-  .brands__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-  }
-
-  /* ================================
-    CONTACT PAGE (BOOKING)
-  ================================ */
 
   .booking {
-    background: var(--color-light-pink);
-    padding: 30px 20px;
-  }
-
-  .booking h2 {
-    font-size: 1.1rem;
-    margin: 25px 0 10px;
-    font-family: var(--font-serif);
-  }
-
-  .booking__row {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
   }
 
   .booking__grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Single col for mobile labels */
-    gap: 12px;
-  }
-
-  input[type="text"], textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-
-  .submit-btn {
-    width: 100%;
-    padding: 15px;
-    background: var(--color-brand-black);
-    color: white;
-    border: none;
-    font-family: var(--font-serif);
-    font-size: 1.1rem;
-    margin-top: 30px;
-    cursor: pointer;
-  }
-
-  /* ================================
-    DESKTOP OVERRIDES (1280px+)
-  ================================ */
-
-  @media (min-width: 1280px) {
-    .beauty-tips__grid {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-    }
-
-    .about__intro {
-      flex-direction: row;
-      justify-content: center;
-      text-align: left;
-      gap: 80px;
-      padding: 80px;
-    }
-
-    .about__title {
-      font-size: 3.5rem;
-    }
-
-    .brands__grid {
-      grid-template-columns: repeat(4, 1fr);
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .booking {
-      max-width: 800px;
-      margin: 0 auto;
-      border-radius: 8px;
-    }
-
-    .booking__grid {
-      grid-template-columns: 1fr 1fr;
-    }
+    grid-template-columns: 1fr 1fr;
   }
 }
