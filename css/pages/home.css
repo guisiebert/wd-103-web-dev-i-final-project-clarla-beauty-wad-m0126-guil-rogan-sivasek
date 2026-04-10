@@ -1,7 +1,7 @@
 /* Home — index.html (BC Beauty first fold + brands; matches style guide) */
 /* Header, mobile menu, expanded footer: see global.css */
 
-/* Main: full width */
+/* Normalize + full width */
 .page-home .site-main--home {
   max-width: none;
   margin: 0;
@@ -9,11 +9,12 @@
   width: 100%;
 }
 
-/* —— Hero —— */
+/* ================================ */
+/* —— Hero Section —— */
+/* ================================ */
 .home-hero {
   position: relative;
   height: 625px;
-  min-height: 625px;
   display: flex;
   align-items: center;
   justify-content: center;
