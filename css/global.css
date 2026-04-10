@@ -9,9 +9,7 @@
 
 /* Site variables */
 :root {
-  --bp-desktop: 1280px;
-
-  /* BC Beauty palette (style guide) */
+  /* BC Beauty palette / style guide */
   --color-brand-black: #191919;
   --color-bold-main: #725a58;
   --color-accent-pink: #e3b6b1;
@@ -76,6 +74,52 @@ a:hover {
   color: var(--color-bold-main);
 }
 
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0 1.75rem;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-brand-black);
+  text-decoration: none;
+  border: 1px solid var(--color-brand-black);
+  border-radius: 2px;
+  background: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--color-brand-black);
+  color: var(--color-paper-white);
+}
+
+.btn--sans {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 0 1.5rem;
+}
+
+.btn--hero {
+  margin-top: var(--space-xs);
+  min-height: unset;
+  padding: 0.65rem 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--color-paper-white);
+  border-color: rgba(251, 250, 250, 0.85);
+}
+
+.btn--hero:hover {
+  background: rgba(251, 250, 250, 0.12);
+  color: var(--color-paper-white);
+}
+
 /* Mobile-first: default styles apply below 1280px */
 .site-header {
   position: sticky;
@@ -136,10 +180,10 @@ a:hover {
 
 .site-footer {
   margin-top: auto;
-  padding: var(--space-md);
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 0;
+  border-top: none;
+  background: var(--color-pale-white);
   font-size: 0.875rem;
-  color: var(--color-text-muted);
   text-align: center;
 }
 
@@ -184,11 +228,11 @@ a:hover {
   cursor: pointer;
 }
 
-.site-header__burger:hover .site-header__burger-icon {
+.site-header__burger:hover img {
   opacity: 0.75;
 }
 
-.site-header__burger-icon {
+.site-header__burger img {
   display: block;
   width: 22px;
   height: auto;
@@ -204,11 +248,11 @@ a:hover {
   text-decoration: none;
 }
 
-.site-header__ig-mobile:hover .site-header__ig-mobile-icon {
+.site-header__ig-mobile:hover img {
   opacity: 0.75;
 }
 
-.site-header__ig-mobile-icon {
+.site-header__ig-mobile img {
   display: block;
   width: 22px;
   height: auto;
@@ -225,26 +269,6 @@ a:hover {
   display: block;
   width: 80px;
   height: auto;
-}
-
-@media (min-width: 1280px) {
-  .site-header__inner--split {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-  }
-
-  .site-header__burger,
-  .site-header__ig-mobile {
-    display: none;
-  }
-
-  .site-logo--mark {
-    justify-self: auto;
-  }
 }
 
 @media (max-width: 1279.98px) {
@@ -298,11 +322,11 @@ a:hover {
   text-decoration: none;
 }
 
-.site-header--split .site-nav__social:hover .site-nav__ig {
+.site-header--split .site-nav__social:hover img {
   opacity: 0.75;
 }
 
-.site-header--split .site-nav__ig {
+.site-header--split .site-nav__social img {
   display: block;
   width: 20px;
   height: auto;
@@ -351,11 +375,11 @@ body.menu-open {
   justify-content: center;
 }
 
-.mobile-menu__close:hover .mobile-menu__close-icon {
+.mobile-menu__close:hover img {
   opacity: 0.75;
 }
 
-.mobile-menu__close-icon {
+.mobile-menu__close img {
   display: block;
   width: 22px;
   height: auto;
@@ -426,11 +450,11 @@ body.menu-open {
   text-decoration: none;
 }
 
-.mobile-menu__social-link:hover .mobile-menu__social-img {
+.mobile-menu__social-link:hover img {
   opacity: 0.75;
 }
 
-.mobile-menu__social-img {
+.mobile-menu__social-link img {
   display: block;
   width: 24px;
   height: auto;
@@ -445,19 +469,7 @@ body.menu-open {
   color: var(--color-dark-grey);
 }
 
-@media (min-width: 1280px) {
-  .mobile-menu {
-    display: none !important;
-  }
-}
-
-/* —— Expanded footer (shared with home) —— */
-
-.site-footer--home {
-  border-top: none;
-  padding: 0;
-  background: var(--color-pale-white);
-}
+/* —— Site footer (same markup on all pages) —— */
 
 .site-footer__inner {
   max-width: 900px;
@@ -483,7 +495,7 @@ body.menu-open {
   opacity: 0.85;
 }
 
-.site-footer__logo-img {
+.site-footer__logo-link img {
   display: block;
   width: 72px;
   height: auto;
@@ -618,9 +630,11 @@ body.menu-open {
 }
 
 
-/* ================================
-  DESKTOP OVERRIDES (1280px+)
-================================ */
+/* --------------------------------------------------------------------------
+   Desktop only (1280px+): one query for header chrome, mobile menu hide,
+   main/footer spacing, and a few inner-page blocks (about, booking, etc.).
+   Below that width, see max-width block above for split-header mobile rules.
+   -------------------------------------------------------------------------- */
 
 @media (min-width: 1280px) {
   .site-header {
@@ -628,7 +642,26 @@ body.menu-open {
   }
 
   .site-header__inner--split {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
     padding: 1rem var(--space-lg);
+  }
+
+  .site-header__burger,
+  .site-header__ig-mobile {
+    display: none;
+  }
+
+  .site-logo--mark {
+    justify-self: auto;
+  }
+
+  .mobile-menu {
+    display: none !important;
   }
 
   .site-main {

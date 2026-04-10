@@ -62,29 +62,6 @@
   color: rgba(251, 250, 250, 0.95);
 }
 
-.home-hero__cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: var(--space-xs);
-  padding: 0.65rem 1.5rem;
-  font-family: var(--font-sans);
-  font-size: 1.125rem;
-  font-weight: 500;
-  line-height: 1.5;
-  color: var(--color-paper-white);
-  text-decoration: none;
-  border: 1px solid rgba(251, 250, 250, 0.85);
-  border-radius: 2px;
-  background: transparent;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.home-hero__cta:hover {
-  background: rgba(251, 250, 250, 0.12);
-  color: var(--color-paper-white);
-}
-
 /* —— About —— */
 .home-about {
   background: var(--color-pale-white);
@@ -216,29 +193,6 @@
   gap: var(--space-md);
 }
 
-.home-about__btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.75rem;
-  padding: 0 1.5rem;
-  font-family: var(--font-sans);
-  font-size: 1.125rem;
-  font-weight: 500;
-  line-height: 1.5;
-  color: var(--color-brand-black);
-  text-decoration: none;
-  border: 1px solid var(--color-brand-black);
-  border-radius: 2px;
-  background: transparent;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.home-about__btn:hover {
-  background: var(--color-brand-black);
-  color: var(--color-paper-white);
-}
-
 .home-about__signature {
   width: min(200px, 45vw);
   height: auto;
@@ -277,27 +231,8 @@
   color: var(--color-dark-grey);
 }
 
-.home-star__btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.75rem;
-  padding: 0 1.75rem;
+.home-star .btn {
   margin-bottom: var(--space-xl);
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--color-brand-black);
-  text-decoration: none;
-  border: 1px solid var(--color-brand-black);
-  border-radius: 2px;
-  background: transparent;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.home-star__btn:hover {
-  background: var(--color-brand-black);
-  color: var(--color-paper-white);
 }
 
 .home-star__gallery {
@@ -391,27 +326,8 @@
   color: var(--color-dark-grey);
 }
 
-.home-services__btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.75rem;
-  padding: 0 1.75rem;
+.home-services .btn {
   margin-bottom: var(--space-xl);
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--color-brand-black);
-  text-decoration: none;
-  border: 1px solid var(--color-brand-black);
-  border-radius: 2px;
-  background: transparent;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.home-services__btn:hover {
-  background: var(--color-brand-black);
-  color: var(--color-paper-white);
 }
 
 .home-services__grid {
@@ -540,27 +456,6 @@
   text-decoration: underline;
 }
 
-.home-academy__btn-all {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.75rem;
-  padding: 0 2rem;
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  color: var(--color-brand-black);
-  text-decoration: none;
-  border: 1px solid var(--color-brand-black);
-  border-radius: 2px;
-  background: transparent;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.home-academy__btn-all:hover {
-  background: var(--color-brand-black);
-  color: var(--color-paper-white);
-}
-
 .home-academy__media {
   width: 100%;
   display: flex;
@@ -624,27 +519,6 @@
 
 .home-diy__card:hover {
   opacity: 0.95;
-}
-
-.home-diy__btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.75rem;
-  padding: 0 1.75rem;
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  color: var(--color-brand-black);
-  text-decoration: none;
-  border: 1px solid var(--color-brand-black);
-  border-radius: 2px;
-  background: transparent;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.home-diy__btn:hover {
-  background: var(--color-brand-black);
-  color: var(--color-paper-white);
 }
 
 @media (min-width: 1280px) {
@@ -760,7 +634,7 @@
     text-align: left;
   }
 
-  .home-academy__btn-all {
+  .home-academy .btn {
     align-self: flex-start;
   }
 

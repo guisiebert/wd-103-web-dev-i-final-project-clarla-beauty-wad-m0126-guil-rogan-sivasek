@@ -40,8 +40,13 @@ User: Gui
   - Add color palette
   - Add fonts
 - index.html and home.css
-  - Create homepage
 - Mobile Menu
+- CSS
+  - global.css
+    - `:root`: colors, fonts, spacing, breakpoint
+    - split header and footer
+    - reusable styles link buttons and links
+    - brands block
 
 ## Branch: `Sivasek-Profile`
 
