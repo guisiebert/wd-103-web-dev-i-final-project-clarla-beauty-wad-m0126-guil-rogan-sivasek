@@ -5,6 +5,7 @@
   - Header & Footer + Global CSS Styles
   - Resolve conflicts
   - Page: Home
+  - Final Deploy
 - Sivasek
   - Page: About
   - Page: Contact
@@ -17,6 +18,8 @@
     - Tabs: Makeup x Hairstyle
   - Page: Academy (Classes)
     - Subpage: Class Details
+
+# Branches: 
 
 ## Branch: `boilerplate`
 
