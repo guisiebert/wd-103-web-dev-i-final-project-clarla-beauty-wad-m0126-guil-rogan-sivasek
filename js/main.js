@@ -1,96 +1,80 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const testButton = document.getElementById("test-js");
-  if (testButton) {
-    testButton.addEventListener("click", () => {
-      alert("Hello, world!");
-    });
-  }
+// ================================
+// MOBILE MENU
+// ================================
 
-  const menu = document.getElementById("mobile-menu");
-  const openBtn = document.getElementById("menu-open");
-  const closeBtn = document.getElementById("menu-close");
+document.addEventListener("DOMContentLoaded", function () {
+  // Get Menu Elements
+  const menu = document.getElementById("mobile-menu")
+  const openBtn = document.getElementById("menu-open")
+  const closeBtn = document.getElementById("menu-close")
+  const menuLinks = menu.querySelectorAll("[data-menu-link]")
 
-  if (!menu || !openBtn || !closeBtn) return;
-
-  const menuLinks = menu.querySelectorAll("[data-menu-link]");
-  const mqDesktop = window.matchMedia("(min-width: 1280px)");
-
+  // A function to open the menu
   function openMenu() {
-    menu.hidden = false;
-    document.body.classList.add("menu-open");
-    closeBtn.focus();
+    menu.hidden = false // removes [hidden] so the overlay is visible
   }
 
+  // A function to close the menu
   function closeMenu() {
-    menu.hidden = true;
-    document.body.classList.remove("menu-open");
-    openBtn.focus();
+    menu.hidden = true
+    document.body.classList.remove("menu-open")
   }
 
-  openBtn.addEventListener("click", openMenu);
+  // Listen for open and close clicks
+  openBtn.addEventListener("click", openMenu)
+  closeBtn.addEventListener("click", closeMenu)
 
-  closeBtn.addEventListener("click", closeMenu);
-
+  // Close the menu when a menu link is clicked
   menuLinks.forEach((link) => {
-    link.addEventListener("click", closeMenu);
-  });
+    link.addEventListener("click", closeMenu)
+  })
 
+  // Close menu when Escape key is pressed
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !menu.hidden) closeMenu();
-  });
-
-  function onViewportChange() {
-    if (mqDesktop.matches && !menu.hidden) closeMenu();
-  }
-
-  if (typeof mqDesktop.addEventListener === "function") {
-    mqDesktop.addEventListener("change", onViewportChange);
-  } else if (typeof mqDesktop.addListener === "function") {
-    mqDesktop.addListener(onViewportChange);
-  }
-
-});
+    if (e.key === "Escape" && !menu.hidden) closeMenu()
+  })
+})
 
 // ================================
 // BOOKING FORM (CONTACT PAGE)
 // ================================
 
 // SELECT BUTTON TOGGLE
-document.querySelectorAll(".select-btn").forEach(btn => {
+document.querySelectorAll(".select-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
-    btn.classList.toggle("active");
-  });
-});
+    btn.classList.toggle("active")
+  })
+})
 
 // COUNTER (+ / -)
-document.querySelectorAll(".person").forEach(person => {
-  const countEl = person.querySelector(".count");
-  const plus = person.querySelector(".plus");
-  const minus = person.querySelector(".minus");
+document.querySelectorAll(".person").forEach((person) => {
+  const countEl = person.querySelector(".count")
+  const plus = person.querySelector(".plus")
+  const minus = person.querySelector(".minus")
 
-  if (!countEl || !plus || !minus) return;
+  if (!countEl || !plus || !minus) return
 
   plus.addEventListener("click", () => {
-    countEl.textContent = parseInt(countEl.textContent) + 1;
-  });
+    countEl.textContent = parseInt(countEl.textContent) + 1
+  })
 
   minus.addEventListener("click", () => {
-    let current = parseInt(countEl.textContent);
+    let current = parseInt(countEl.textContent)
     if (current > 0) {
-      countEl.textContent = current - 1;
+      countEl.textContent = current - 1
     }
-  });
-});
+  })
+})
 
 // FORM SUBMIT → SHOW RESULT
-const bookingForm = document.getElementById("bookingForm");
-const result = document.getElementById("result");
+const bookingForm = document.getElementById("bookingForm")
+const result = document.getElementById("result")
 
 if (bookingForm && result) {
   bookingForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+    e.preventDefault()
 
-    bookingForm.classList.add("hidden");
-    result.classList.remove("hidden");
-  });
+    bookingForm.classList.add("hidden")
+    result.classList.remove("hidden")
+  })
 }

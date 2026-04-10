@@ -1,4 +1,45 @@
-/* Contact — contact.html */
-.page-contact .site-main {
-  /* Service tab, Classes tab, forms */
+/* ================================
+  CONTACT PAGE (BOOKING)
+================================ */
+
+.booking {
+  background: var(--color-light-pink);
+  padding: 30px 20px;
+}
+
+.booking h2 {
+  font-size: 1.1rem;
+  margin: 25px 0 10px;
+  font-family: var(--font-serif);
+}
+
+.booking__row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.booking__grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single col for mobile labels */
+  gap: 12px;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: var(--color-brand-black);
+  color: white;
+  border: none;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  margin-top: 30px;
+  cursor: pointer;
 }
